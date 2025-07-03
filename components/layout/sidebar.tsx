@@ -1,7 +1,21 @@
 "use client";
 
 import * as React from "react";
-import { BookOpen, Bot, Command, Settings2, SquareTerminal } from "lucide-react";
+import {
+  AlarmCheck,
+  BookOpen,
+  Bot,
+  Calculator,
+  Calendar,
+  Camera,
+  CarTaxiFrontIcon,
+  Command,
+  PersonStanding,
+  Settings2,
+  ShoppingBag,
+  SquareTerminal,
+  Workflow,
+} from "lucide-react";
 
 import { NavMain } from "@/components/nav-main";
 import { NavUser } from "@/components/nav-user";
@@ -19,23 +33,73 @@ import { useAuth } from "@/context/AuthProvider";
 const data = {
   navMain: [
     {
-      title: "Dahboard",
+      title: "Dashboard",
       url: "/dashboard",
       icon: SquareTerminal,
+    },
+    {
+      title: "Enquiry",
+      url: "/enquires",
+      icon: AlarmCheck,
     },
     {
       title: "Clients",
       url: "#",
       icon: Bot,
+      items: [
+        { title: "Add Client", url: "/clients/add" },
+        { title: "View Clients", url: "/clients/view" },
+      ],
     },
     {
       title: "Projects",
-      url: "/projects",
+      url: "#",
       icon: BookOpen,
+      items: [
+        { title: "Add Project", url: "/projects/add" },
+        { title: "View Projects", url: "/projects/view" },
+      ],
+    },
+    {
+      title: "Shoots",
+      url: "#",
+      icon: Camera,
+    },
+    {
+      title: "Deliverables",
+      url: "#",
+      icon: CarTaxiFrontIcon,
+    },
+    {
+      title: "Employees",
+      url: "#",
+      icon: PersonStanding,
+    },
+
+    {
+      title: "Attendence",
+      url: "#",
+      icon: Calendar,
+    },
+
+    {
+      title: "Task",
+      url: "#",
+      icon: Workflow,
+    },
+    {
+      title: "Accounts",
+      url: "#",
+      icon: Calculator,
+    },
+    {
+      title: "Packages",
+      url: "#",
+      icon: ShoppingBag,
     },
     {
       title: "Settings",
-      url: "#",
+      url: "/settings",
       icon: Settings2,
     },
   ],
